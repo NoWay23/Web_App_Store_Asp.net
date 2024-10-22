@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel = "stylesheet" type="text/css" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body> 
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">SUPERSUS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-2">
+                        <li class="nav-item active">
+                            <a class="nav-link"  asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Games/List">Все игры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Games/List/Shooter">Шутеры</a>
+                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="/Games/List/Slasher">Слэшеры</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Games/List/Survival">Выживание</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Games/List/Simulator">Симуляторы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ShopCart/">Корзина</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Поиск</button>
+
+                    <script>
+                        
+                    </script>
+                    </form>
+                </div>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        @RenderBody()
+    </div>
+    <
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2023 Все права защищены. · <a href="#">Соглашения</a></p>
+    </footer>
+    <script src = "~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
